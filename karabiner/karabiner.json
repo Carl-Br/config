@@ -51,6 +51,16 @@
                         },
                         {
                             "from": {
+                                "key_code": "left_control"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "left_command"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
                                 "key_code": "left_option"
                             },
                             "to": [
@@ -61,11 +71,11 @@
                         },
                         {
                             "from": {
-                                "key_code": "left_control"
+                                "key_code": "right_control"
                             },
                             "to": [
                                 {
-                                    "key_code": "left_command"
+                                    "key_code": "right_option"
                                 }
                             ]
                         }
