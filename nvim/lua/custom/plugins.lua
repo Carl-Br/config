@@ -7,6 +7,9 @@ local plugins = {
         "clangd",
         "clang-format",
         "codelldb",
+        "pyright",--python
+        "ruff-lsp",
+        "black",
       },
     },
   },
