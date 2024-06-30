@@ -9,17 +9,28 @@ local plugins = {
         "codelldb",
         "pyright",--python
         "ruff-lsp",
-        "black",
+      "black",
         "github/copilot.vim"
       },
     },
   },
-  {"github/copilot.vim",
-  event = "VeryLazy"},
-  -- Nvdash Dashboard on startup
-  status = {
-      dashboard = true,
-   },
+  {
+    "github/copilot.vim",
+     event = "VeryLazy",
+    config = function()
+      -- Set Copilot keymap to use <C-F> instead of <Tab>
+      vim.keymap.set('i', '<C-F>', 'copilot#Accept("\\<CR>")', {
+        expr = true,
+        replace_keycodes = false
+      })
+      vim.g.copilot_no_tab_map = true
+  end,
+
+},
+-- Nvdash Dashboard on startup
+status = {
+    dashboard = true,
+ },
   -- NVIM DAP SETTINGS
   {
     "mfussenegger/nvim-dap",
