@@ -10,9 +10,16 @@ local plugins = {
         "pyright",--python
         "ruff-lsp",
         "black",
+        "github/copilot.vim"
       },
     },
   },
+  {"github/copilot.vim",
+  event = "VeryLazy"},
+  -- Nvdash Dashboard on startup
+  status = {
+      dashboard = true,
+   },
   -- NVIM DAP SETTINGS
   {
     "mfussenegger/nvim-dap",
