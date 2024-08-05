@@ -19,7 +19,7 @@ local plugins = {
      event = "VeryLazy",
     config = function()
       -- Set Copilot keymap to use <C-F> instead of <Tab>
-      vim.keymap.set('i', '<C-F>', 'copilot#Accept("\\<CR>")', {
+      vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
         expr = true,
         replace_keycodes = false
       })
@@ -27,10 +27,6 @@ local plugins = {
   end,
 
 },
--- Nvdash Dashboard on startup
-status = {
-    dashboard = true,
- },
   -- NVIM DAP SETTINGS
   {
     "mfussenegger/nvim-dap",
