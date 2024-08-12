@@ -1,2 +1,4 @@
--- also centers the screen after jumping to matching pair
---vim.keymap.set('n', '%', '%zz', { noremap = true, silent = true, desc = "Jump to matching pair and center screen" })
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+
+vim.opt.guicursor = ""
