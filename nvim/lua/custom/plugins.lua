@@ -9,8 +9,10 @@ local plugins = {
         "codelldb",
         "pyright",--python
         "ruff-lsp",
-      "black",
-        "github/copilot.vim"
+        "black",
+        "github/copilot.vim",
+        "templ",
+        "tailwindcss"
       },
     },
   },

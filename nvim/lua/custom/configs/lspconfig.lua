@@ -48,6 +48,13 @@ lspconfig.gopls.setup {
   },
 }
 
+-- Go Templ
+lspconfig.templ.setup {
+  on_attach = custom_on_attach,
+  capabilities = capabilities,
+  filetypes = { "html", "templ" },
+}
+
 --C++
 lspconfig.clangd.setup {
   on_attach = function(client, bufnr)
@@ -62,4 +69,17 @@ lspconfig.pyright.setup({
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = {"python"}
+})
+
+lspconfig.tailwindcss.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+    settings = {
+      tailwindCSS = {
+        includeLanguages = {
+          templ = "html",
+        },
+      },
+    },
 })
