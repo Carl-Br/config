@@ -19,17 +19,6 @@ local default_plugins = {
   },
 
   {
-    "zbirenbaum/nvterm",
-    init = function()
-      require("core.utils").load_mappings "nvterm"
-    end,
-    config = function(_, opts)
-      require "base46.term"
-      require("nvterm").setup(opts)
-    end,
-  },
-
-  {
     "NvChad/nvim-colorizer.lua",
     event = "User FilePost",
     config = function(_, opts)
