@@ -44,6 +44,10 @@ lspconfig.gopls.setup {
       analyses = {
         unusedparams = true,
       },
+      gofumpt = true, -- optional, stricter formatting rules
+      format = {
+        lineWidth = 120, -- Adjust this value to control line breaks
+      },
     },
   },
 }
@@ -82,4 +86,9 @@ lspconfig.tailwindcss.setup({
         },
       },
     },
+})
+
+lspconfig.csharp_ls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
 })
