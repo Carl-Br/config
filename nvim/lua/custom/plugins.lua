@@ -1,13 +1,17 @@
+
+local on_attach = require("plugins.configs.lspconfig").on_attach
 local plugins = {
   {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
         "gopls",
+        "csharpier",
+        "csharp-language-server",
         "clangd",
         "clang-format",
         "codelldb",
-        "pyright",--python
+        "pyright",
         "ruff-lsp",
         "black",
         "github/copilot.vim",
@@ -28,13 +32,13 @@ local plugins = {
       vim.g.copilot_no_tab_map = true
   end,
 
-},
+  },
   -- NVIM DAP SETTINGS
   {
     "mfussenegger/nvim-dap",
     init = function()
       require("core.utils").load_mappings("dap")
-    end
+    end,
   },
   {
     "dreamsofcode-io/nvim-dap-go",
@@ -84,7 +88,7 @@ local plugins = {
       vim.cmd [[silent! GoInstallDeps]]
     end,
   },
-{
+  {
     "theprimeagen/harpoon",
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" },
@@ -101,5 +105,28 @@ local plugins = {
       { "<leader>5", function() require("harpoon"):list():select(5) end, desc = " harpoon to File 5", },
     },
   },
+  {
+  "scalameta/nvim-metals",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+  },
+  ft = { "scala", "sbt", "java" },
+  opts = function()
+    local metals_config = require("metals").bare_config()
+    metals_config.on_attach = on_attach
+
+    return metals_config
+  end,
+  config = function(self, metals_config)
+    local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = self.ft,
+      callback = function()
+        require("metals").initialize_or_attach(metals_config)
+      end,
+      group = nvim_metals_group,
+    })
+  end
+  }
 }
 return plugins
