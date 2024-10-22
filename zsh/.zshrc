@@ -24,5 +24,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#808080'
 
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 #zoxide
 eval "$(zoxide init --cmd cd zsh)" # should be at the end of the config file
