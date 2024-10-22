@@ -14,9 +14,11 @@ config.window_decorations = "RESIZE"
 -- hide tabs
 config.enable_tab_bar = false
 
+-- scheme
 config.color_scheme = 'Gotham (Gogh)'
 config.window_background_opacity = 0.9
 config.macos_window_background_blur = 10
+
 
 -- allow left alt key be be used 
 -- other wise it will be used as a meta key

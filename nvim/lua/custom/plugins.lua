@@ -16,7 +16,11 @@ local plugins = {
         "black",
         "github/copilot.vim",
         "templ",
-        "tailwindcss"
+        "tailwindcss",
+        "sql-formatter",
+        "sqlfluff",
+        "sqlfmt",
+        "sqls",
       },
     },
   },
@@ -127,6 +131,18 @@ local plugins = {
       group = nvim_metals_group,
     })
   end
+  },
+  {
+    "tpope/vim-dadbod",
+    event = "VimEnter",
+  },
+  {
+    "kristijanhusak/vim-dadbod-completion",
+    event = "VimEnter",
+  },
+  {
+    "kristijanhusak/vim-dadbod-ui",
+    event = "VimEnter",
   }
 }
 return plugins
