@@ -97,8 +97,13 @@ local plugins = {
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-      require("harpoon"):setup()
-    end,
+      require("harpoon").setup({
+        global_settings = {
+          save_on_toggle = true, -- Speichert automatisch, wenn das Harpoon-Menü getoggelt wird
+          save_on_change = true, -- Speichert automatisch nach jeder Änderung
+        },
+      })
+  end,
     keys = {
       { "<leader>A", function() require("harpoon"):list():add() end, desc = "add file to harpoon", },
       { "<leader>a", function() local harpoon = require("harpoon") harpoon.ui:toggle_quick_menu(harpoon:list()) end, desc = "harpoon menu", },
