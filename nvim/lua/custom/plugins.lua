@@ -21,6 +21,7 @@ local plugins = {
         "sqlfluff",
         "sqlfmt",
         "sqls",
+        "elixir-ls",
       },
     },
   },
