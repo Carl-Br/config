@@ -1,4 +1,3 @@
-
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local plugins = {
   {
@@ -22,6 +21,7 @@ local plugins = {
         "sqlfmt",
         "sqls",
         "elixir-ls",
+        "typescrit-language-server",
       },
     },
   },

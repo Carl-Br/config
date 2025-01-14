@@ -9,6 +9,8 @@ local opts = {
     null_ls.builtins.formatting.clang_format,-- c++
     null_ls.builtins.formatting.black,--python
     null_ls.builtins.formatting.csharpier,--c#
+    null_ls.builtins.diagnostics.eslint,
+    null_ls.builtins.formatting.prettier,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
