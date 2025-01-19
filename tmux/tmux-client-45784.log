@@ -1,0 +1,9 @@
+1723886324.734858 client started (45784): version 3.4, socket /private/tmp/tmux-501/default, protocol 8
+1723886324.734893 on Darwin 23.5.0 Darwin Kernel Version 23.5.0: Wed May  1 20:16:51 PDT 2024; root:xnu-10063.121.3~5/RELEASE_ARM64_T8103
+1723886324.734902 using libevent 2.1.12-stable select
+1723886324.735106 using utf8proc 2.9.0
+1723886324.735114 using ncurses 6.5 20240427
+1723886324.735127 flags are 0x8010000
+1723886324.735132 socket is /private/tmp/tmux-501/default
+1723886324.735140 trying connect
+1723886324.735148 connect failed: No such file or directory
