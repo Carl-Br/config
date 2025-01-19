@@ -30,13 +30,16 @@ local plugins = {
      event = "VeryLazy",
     config = function()
       -- Set Copilot keymap to use <C-F> instead of <Tab>
-      vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
+      vim.keymap.set('i', '<C-f>', 'copilot#Accept("\\<CR>")', {
         expr = true,
         replace_keycodes = false
       })
       vim.g.copilot_no_tab_map = true
   end,
-
+  },
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
   },
   -- NVIM DAP SETTINGS
   {
