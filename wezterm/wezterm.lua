@@ -1,4 +1,3 @@
--- Pull in the wezterm API
 local wezterm = require 'wezterm';
 
 -- This will hold the configuration 
@@ -15,9 +14,9 @@ config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
 
 -- scheme
-config.color_scheme = 'Gotham (Gogh)'
+config.color_scheme = 'tokyonight'
 config.window_background_opacity = 0.9
-config.macos_window_background_blur = 10
+-- config.macos_window_background_blur = 10
 
 
 -- allow left alt key be be used 
@@ -39,7 +38,7 @@ config.keys = {
         win:perform_action(wezterm.action.SendKey { key = 'RightArrow' }, pane)
       else
         -- Wenn in Vim, standardmäßiges Verhalten
-        win:perform_action(wezterm.action.SendKey { key = 'j', mods = 'CTRL' }, pane)
+        win:perform_action(wezterm.action.SendKey { key = 'f', mods = 'CTRL' }, pane)
       end
     end),
   },
