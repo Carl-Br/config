@@ -1,0 +1,97 @@
+# Common recent settings file for Wireshark 4.2.5.
+#
+# This file is regenerated each time Wireshark is quit
+# and when changing configuration profile.
+# So be careful, if you want to make manual changes here.
+
+######## Recent capture files (latest last), cannot be altered through command line ########
+
+recent.capture_file: /Users/carl/Downloads/tcp_zerowindowrecovery.pcap
+recent.capture_file: /Users/carl/Downloads/tcp_handshake.pcap
+recent.capture_file: /Users/carl/Downloads/tcp_zerowindowdead.pcap
+recent.capture_file: /Users/carl/Downloads/tcp_dupack.pcap
+recent.capture_file: /Users/carl/Downloads/slow_start.pcap
+recent.capture_file: /Users/carl/Downloads/ip_frag_source.pcap
+
+######## Recent capture filters (latest first), cannot be altered through command line ########
+
+
+######## Recent display filters (latest last), cannot be altered through command line ########
+
+recent.display_filter: (tcp.ack == 127)
+recent.display_filter: tcp.ack == 127
+recent.display_filter: (tcp.ack == 127) && !(tcp.len == 1460)
+recent.display_filter: (tcp.ack == 127) && !(tcp.analysis.bytes_in_flight == 1484)
+recent.display_filter: (tcp.ack == 127) && !(tcp.analysis.bytes_in_flight == 1460)
+recent.display_filter: (tcp.ack == 127) && (!tcp.analysis.bytes_in_flight == 1460)
+recent.display_filter: (tcp.ack == 127) && (tcp.analysis.bytes_in_flight != 1460)
+recent.display_filter: (tcp.ack == 127) && (tcp.analysis.bytes_in_flight == 1460)
+recent.display_filter: (tcp.ack== 127) && (tcp.segment_data == 9d:aa:76:15:30:be:e6:4f:cb:e5:08:1d:00:88:c7:0c:f7:18:32:58:f1:74:fc:cb:18:55:7d:e9:1e:d0:f4:28:1c:a1:ed:fb:32:b4:56:d6:de:c6:96:e3:97:39:a4:0a:d7:7b:f8:fd:7f:30:36:e9:2a:fd:f8:23:a9:d3:2f:68:c5:03:5e:49:bc:bb:c4:24:bb:4d:f9:8f:3a:e1:2e:d1:14:f6:59:d2:90:10:ee:c9:b4:48:46:01:fa:be:94:cd:c9:23:12:5f:e2:8a:ff:bb:b7:7f:80:4a:c4:e9:80:29:3d:77:4b:a8:ea:0f:0e:18:4e:93:3a:41:17:2b:fa:f1:0f:ce:ea:c3:32:5b:be:51:4d:07:24:26:50:14:08:d2:5f:b7:25:86:0c:f2:5b:a3:5c:32:ce:41:b0:11:23:8c:a7:86:b2:1d:ad:6c:0d:a4:67:f4:f8:1f:4a:1d:bf:24:68:3e:fc:98:a3:5c:77:44:50:de:62:9c:2a:0d:6d:20:51:e4:ff:cd:2a:71:f6:92:49:60:85:50:08:23:49:a1:74:f5:42:7c:ae:bf:b4:c1:0c:99:d6:3a:f3:03:51:61:82:9a:9a:77:a3:0b:c5:7f:84:11:48:6e:c7:33:14:2e:df:37:5e:9e:32:ab:f4:91:1c:69:a0:60:c6:aa:8b:c3:39:91:bc:39:2c:86:06:b0:3d:e0:f7:75:4d:b3:19:4e:ba:2e:33:7e:98:68:61:f6:5c:cc:12:97:86:c2:21:5d:3f:5f:dd:c7:ea:07:87:2c:e3:8b:cf:10:74:c9:f5:e9:3b:29:0a:26:a3:5a:b5:c2:e0:9f:6b:16:f5:3a:4d:6a:a2:27:a8:02:dc:54:27:3a:cf:e5:30:a4:9e:97:48:f5:68:56:0c:57:d2:72:74:c4:95:f2:62:1b:c6:82:00:ca:f8:f7:85:a7:07:0b:2f:09:04:3b:28:b2:84:ae:1c:cc:7b:d6:a7:6d:ad:63:8f:7c:3a:fd:0e:be:b5:8e:35:5c:c2:a1:02:d0:59:e7:1f:59:83:f5:45:be:2c:0d:64:4c:2e:cc:15:f3:eb:4d:ec:c7:9b:76:86:d6:f1:cf:0d:70:7f:52:1b:93:e8:54:75:c1:7a:e2:50:c5:e6:da:c3:92:bf:35:83:0e:58:57:e4:0c:5c:af:e8:a8:e6:71:c5:4b:f0:10:bf:ed:aa:16:2a:32:e3:85:05:79:5f:08:a5:d7:8b:f2:b8:8f:85:ac:03:0f:8e:27:3a:6d:34:eb:44:54:ed:02:3a:23:e2:2c:8a:7a:0b:e9:f9:91:60:5f:2e:9f:0e:9c:c6:7d:73:22:a5:40:d5:c8:ee:4d:0f:71:a8:df:b7:09:74:6c:2e:4d:5c:d8:d8:02:89:8f:42:07:28:75:b0:05:13:96:a4:24:81:67:d6:58:ae:ad:c0:61:6f:e6:40:c0:be:ff:ba:1d:4f:64:6a:3b:39:c3:15:0a:54:cd:58:4c:26:2f:9c:ab:4f:a1:5e:29:05:ac:9f:6a:4a:c7:dd:ef:da:f8:3f:d9:c2:a3:99:f4:c7:33:78:06:54:be:78:45:53:24:17:e0:33:26:2f:d8:4b:03:9d:2a:72:5a:33:fa:f5:35:01:a6:8e:6f:a3:22:0f:44:b3:72:15:c9:ea:9f:f8:ed:6f:95:6d:ef:d5:96:63:94:94:bd:de:0e:fc:38:63:75:69:b1:a9:67:eb:8d:4b:48:1b:62:84:a9:1f:98:d8:02:83:98:f1:5f:dd:e3:ae:80:24:08:d7:cb:65:9b:02:93:a5:98:a6:ad:99:08:e7:f5:a8:e5:ae:f9:9e:1e:eb:f1:41:82:6d:1d:d8:ac:3c:9a:07:0e:38:14:69:93:60:90:8e:f3:96:47:71:94:5a:a0:40:a7:5c:a0:9d:e9:51:4b:04:b8:3b:d9:37:f8:ab:21:c5:47:2f:3f:10:21:e7:1e:95:d2:58:88:20:61:17:73:a3:b1:81:e3:d7:46:c8:a1:18:b8:66:55:4d:3f:eb:04:7f:fc:de:d2:10:58:2d:2d:ab:1a:c0:27:60:fc:15:5c:12:2e:03:04:c1:9a:7e:12:e6:6a:69:bb:cd:4b:f7:5c:73:0b:30:39:45:d3:01:96:5d:c0:a2:78:9b:bd:27:44:f1:ff:13:4d:63:ce:22:75:71:b8:fc:e8:f1:c7:fc:a4:c9:33:5a:2c:1c:68:dd:8e:b8:d4:f0:6a:6c:df:5d:f3:1b:03:48:4d:41:e5:85:10:b3:49:da:04:7b:63:48:ac:ed:49:ee:e6:59:cc:ad:e6:ee:46:18:34:69:3f:c9:fa:9f:f4:b0:3d:57:a4:0b:27:38:d3:8b:1d:03:7a:26:f0:9a:41:73:2d:22:c9:49:85:0e:7b:99:db:d2:d6:b2:93:5c:7d:d9:80:0c:71:47:f2:ac:a2:e0:6a:d4:cb:84:22:74:b2:04:16:8e:50:3f:74:72:4c:0f:de:29:28:68:d6:e6:f2:f9:4e:70:70:60:0e:36:fd:ca:31:cf:11:3d:91:4e:76:16:c2:48:8d:a6:66:6d:8d:e7:0d:3c:96:92:3f:7a:16:ba:b2:e7:4c:f9:8c:75:07:86:d7:d3:36:d8:cc:8e:09:39:8f:0f:95:b4:54:22:82:6d:82:a6:fc:ea:35:39:ce:0b:d7:6b:20:2d:6b:81:46:f6:a5:7a:57:72:99:39:59:29:73:09:be:62:0b:5c:d6:81:09:52:62:d4:e1:0a:2d:be:90:6d:4d:13:5b:74:fe:1e:9e:cf:b0:a2:95:79:43:d9:07:4a:69:d3:a1:1f:11:cc:a1:74:c0:4b:47:67:36:20:70:bc:4c:ee:18:24:5b:ae:c6:12:c1:8e:55:be:93:ec:8f:81:20:7c:98:5f:ca:e3:4f:3a:d3:d2:47:60:70:16:0c:cc:33:bf:70:d3:e2:11:e4:8a:e6:db:d6:d5:a2:5a:5d:e1:fc:67:b4:a4:24:b1:0f:1d:c7:74:61:a5:df:a9:7d:73:71:29:23:7c:de:dd:1a:92:7b:c0:9b:0e:1a:74:f4:7e:9d:5d:41:c9:06:a1:df:28:a7:73:59:20:1c:c8:2e:35:32:1f:d4:59:2b:f6:3c:5d:ba:d0:79:b9:9c:1d:ae:0d:16:ce:f3:0a:0e:3b:aa:59:32:f5:ca:06:20:a6:80:9b:8c:04:4e:db:12:44:af:81:ef:15:ec:0b:4b:a5:fa:f1:d6:1e:16:40:14:82:29:5f:01:12:b2:e7:6a:4e:b8:09:4c:57:33:37:a6:9c:27:c7:1d:0b:ae:07:72:b4:97:5a:fc:11:61:d0:48:09:1b:c9:44:11:92:ff:f0:ae:9b:46:99:8e:7a:22:42:fa:c2:75:06:4c:43:5b:22:e7:67:1d:a8:12:66:2f:22:e7:f7:0f:8e:89:26:6f:0e:24:37:fb:f9:7b:9c:1d:8d:ea:89:49:ff:27:11:9d:0b:a4:3a:bf:0a:f3:3b:f9:06:c0:f4:06:2c:40:ce:3f:1d:6d:dd:ed:e2:ed:2f:11:4b:fe:37:0d:f8:44:73:4c:02:15:22:d8:44:a4:3c:7a:fa:05:96:67:a1:49:bc:e2:b5:db:f0:03:ac:ef:94:4b:e0:42:49:83:26:57:8d:06:00:19:2c:f4:c0:e7:46:91:49:5b:25:96:ec:75:50:3f:26:81:8f:0e:0d:43:bf:8b:47:72:ec:db:cf:12:9c:fc:b0:31:01:9a:25:bf:66:a4:ff:93:f4:c5:e3:0b:bc:8a:86:b3:7b:a0:f1:59:ec:28:d2:8f:21:a9:e5:27:ce:d5:bf:f1:63:ef:61:e6:9a:3a:fd:ca:01:95:07:11:50:39:ed:23:e9:b9:d7:b4:3e)
+recent.display_filter: _ws.col.info == "80 → 51342 [ACK] Seq=661517 Ack=127 Win=5888 Len=1460 [TCP segment of a reassembled PDU]"
+
+# Main window geometry.
+# Decimal numbers.
+gui.geometry_main_x: 0
+gui.geometry_main_y: 540
+gui.geometry_main_width: 960
+gui.geometry_main_height: 555
+
+# Main window maximized.
+# TRUE or FALSE (case-insensitive).
+gui.geometry_main_maximized: FALSE
+
+# Leftalign Action Buttons.
+# TRUE or FALSE (case-insensitive).
+gui.geometry_leftalign_actions: FALSE
+
+# Last used Configuration Profile.
+gui.last_used_profile: Default
+
+# WLAN statistics upper pane size.
+# Decimal number.
+gui.geometry_status_wlan_stats_pane: 200
+
+# Warn if running with elevated permissions (e.g. as root).
+# TRUE or FALSE (case-insensitive).
+privs.warn_if_elevated: TRUE
+
+# Warn if Wireshark is unable to capture.
+# TRUE or FALSE (case-insensitive).
+sys.warn_if_no_capture: TRUE
+
+# Find packet search in.
+# One of: PACKET_LIST, PACKET_DETAILS, PACKET_BYTES
+gui.search_in: PACKET_LIST
+
+# Find packet character set.
+# One of: NARROW_AND_WIDE, NARROW, WIDE
+gui.search_char_set: NARROW_AND_WIDE
+
+# Find packet case sensitive search.
+# TRUE or FALSE (case-insensitive).
+gui.search_case_sensitive: FALSE
+
+# Find packet search type.
+# One of: DISPLAY_FILTER, HEX_VALUE, STRING, REGEX
+gui.search_type: DISPLAY_FILTER
+
+# Geometry and maximized state of TCPStreamDialog window.
+# Decimal integers.
+gui.geom.TCPStreamDialog.x: 567
+gui.geom.TCPStreamDialog.y: 104
+gui.geom.TCPStreamDialog.width: 784
+gui.geom.TCPStreamDialog.height: 841
+# TRUE or FALSE (case-insensitive).
+gui.geom.TCPStreamDialog.maximized: FALSE
+
+# Custom colors.
+# List of custom colors selected in Qt color picker.
+gui.custom_colors: 
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff"
