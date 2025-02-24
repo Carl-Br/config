@@ -12,8 +12,9 @@
     configuration = { pkgs, ... }: {
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
-      environment.systemPackages =
-        [ pkgs.vim
+      environment.systemPackages =[ 
+        pkgs.vim
+        pkgs.htop
         ];
 
       # Necessary for using flakes on this system.
@@ -37,7 +38,7 @@
   {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#simple
-    darwinConfigurations."simple" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."Carls-MacBook-Air" = nix-darwin.lib.darwinSystem {
       modules = [ configuration ];
     };
   };
