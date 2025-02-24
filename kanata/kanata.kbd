@@ -13,7 +13,7 @@
   ;; For example, your pinkies might be slower to release keys and index
   ;; fingers faster.
   tap-time 200
-  hold-time 150
+  hold-time 250
 )
   
 ;; cmd alt ctr shift          shift ctr alt cmd
