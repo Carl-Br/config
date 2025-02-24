@@ -11,8 +11,6 @@ pane: window split
 
 ## Sessions
 
-### creating a Session
-
 - **tmux** command while not attached to antother tmux session
 - **thmux** new command while attached to another tmux session
 - **thmux new -s my-session**
@@ -21,6 +19,8 @@ pane: window split
 - **w** -> preview windows for each session for each session
 - **tmux attach** -> attaches to most recent session
 - **tmux attach -t <sessions name>** -> attaches to session
+- **:new** create new session
+- **$** rename session
 
 ## windows
 
