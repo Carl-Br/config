@@ -8,11 +8,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-alias pip='python3 -m pip'
+#alias pip='python3 -m pip'
 alias vim='nvim'
 alias air='~/go/bin/air'
-alias tmux="tmux -f ~/.config/tmux/tmux.conf" # add config to tmux
-
+alias tmux="tmux -f ~/.config/tmux/tmux.conf -l new -t meow" # add config to tmux
 export PATH=$PATH:~/go/bin
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
@@ -21,10 +20,8 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#808080'
-
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 #zoxide
+eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)" # should be at the end of the config file
