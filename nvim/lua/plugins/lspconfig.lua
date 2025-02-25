@@ -196,7 +196,6 @@ return {
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
       -- clangd = {},
-      -- gopls = {},
       -- pyright = {},
       -- rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -208,6 +207,20 @@ return {
       -- ts_ls = {},
       --
 
+      gopls = {
+        cmd = { 'gopls' },
+        filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
+        settings = {
+          gopls = {
+            completeUnimported = true,
+            usePlaceholders = true,
+            analyses = {
+              unusedparams = true,
+            },
+            gofumpt = true, -- optional, stricter formatting rules
+          },
+        },
+      },
       lua_ls = {
         -- cmd = { ... },
         -- filetypes = { ... },
@@ -240,6 +253,7 @@ return {
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format Lua code
+      'tailwindcss-language-server',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -257,5 +271,15 @@ return {
         end,
       },
     }
+
+    -- Set tab width to 2 for Go files
+    vim.api.nvim_create_autocmd('FileType', {
+      pattern = 'go',
+      callback = function()
+        vim.bo.expandtab = true
+        vim.bo.tabstop = 4
+        vim.bo.shiftwidth = 2
+      end,
+    })
   end,
 }

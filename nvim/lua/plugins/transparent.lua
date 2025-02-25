@@ -4,7 +4,6 @@ return {
   config = function()
     require('transparent').setup {
       extra_groups = {
-        'NormalFloat', -- Für Floating-Windows wie Lazy, Mason, LspInfo
         'NvimTreeNormal', -- Für NvimTree
       },
     }
