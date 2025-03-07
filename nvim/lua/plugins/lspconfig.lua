@@ -254,6 +254,8 @@ return {
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format Lua code
       'tailwindcss-language-server',
+      'templ',
+      'json-lsp',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -274,7 +276,7 @@ return {
 
     -- Set tab width to 2 for Go files
     vim.api.nvim_create_autocmd('FileType', {
-      pattern = 'go',
+      pattern = 'go,templ',
       callback = function()
         vim.bo.expandtab = true
         vim.bo.tabstop = 4
