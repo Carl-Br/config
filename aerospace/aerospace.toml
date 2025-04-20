@@ -190,6 +190,8 @@ automatically-unhide-macos-hidden-apps = false
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-ctrl-shift-semicolon = 'mode service'
 
+    alt-ctrl-enter = 'fullscreen'
+
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
@@ -205,7 +207,3 @@ automatically-unhide-macos-hidden-apps = false
     alt-ctrl-shift-j = ['join-with down', 'mode main']
     alt-ctrl-shift-k = ['join-with up', 'mode main']
     alt-ctrl-shift-l = ['join-with right', 'mode main']
-
-    down = 'volume down'
-    up = 'volume up'
-    shift-down = ['volume set 0', 'mode main']
