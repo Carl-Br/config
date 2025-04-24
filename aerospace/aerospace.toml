@@ -207,3 +207,35 @@ automatically-unhide-macos-hidden-apps = false
     alt-ctrl-shift-j = ['join-with down', 'mode main']
     alt-ctrl-shift-k = ['join-with up', 'mode main']
     alt-ctrl-shift-l = ['join-with right', 'mode main']
+
+[[on-window-detected]]
+if.app-id="com.github.wez.wezterm"
+run="move-node-to-workspace W"
+
+[[on-window-detected]]
+if.app-id="com.google.Chrome"
+run="move-node-to-workspace C"
+
+[[on-window-detected]]
+if.app-id="com.hnc.Discord"
+run="move-node-to-workspace D"
+
+[[on-window-detected]]
+if.app-id="md.Obsidian"
+run="move-node-to-workspace O"
+
+[[on-window-detected]]
+if.app-id="com.apple.mail"
+run="move-node-to-workspace M"
+
+[[on-window-detected]]
+if.app-id="com.spotify.client"
+run="move-node-to-workspace M"
+
+[[on-window-detected]]
+if.app-id="net.ankiweb.dtop"
+run="move-node-to-workspace A"
+
+[[on-window-detected]]
+if.app-id="com.openai.chat"
+run="move-node-to-workspace T"
