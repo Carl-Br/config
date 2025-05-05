@@ -96,6 +96,8 @@ automatically-unhide-macos-hidden-apps = false
     # end tell'
     # '''
 
+    cmd-ctrl-f = "exec-and-forget /usr/bin/osascript -e 'tell application \"Finder\"' -e 'activate' -e 'make new Finder window' -e 'end tell'"
+
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     alt-ctrl-cmd-slash = 'layout tiles horizontal vertical'
     alt-ctrl-cmd-comma = 'layout accordion horizontal vertical'
