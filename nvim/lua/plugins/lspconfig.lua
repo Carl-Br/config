@@ -256,6 +256,9 @@ return {
       'tailwindcss-language-server',
       'templ',
       'json-lsp',
+      'prettier',
+      'eslint-lsp',
+      'typescript-language-server',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
