@@ -96,7 +96,7 @@ automatically-unhide-macos-hidden-apps = false
     # end tell'
     # '''
 
-    cmd-ctrl-f = "exec-and-forget /usr/bin/osascript -e 'tell application \"Finder\"' -e 'activate' -e 'make new Finder window' -e 'end tell'"
+cmd-ctrl-f = "exec-and-forget /usr/bin/osascript -e 'tell application \"Finder\"' -e 'activate' -e 'make new Finder window to (path to downloads folder)' -e 'end tell'"
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     alt-ctrl-cmd-slash = 'layout tiles horizontal vertical'
@@ -130,7 +130,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-ctrl-cmd-9 = 'workspace 9'
     alt-ctrl-cmd-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
     alt-ctrl-cmd-b = 'workspace B'
-    alt-ctrl-cmd-c = 'workspace C'
+    alt-ctrl-cmd-c = ['workspace C', 'exec-and-forget osascript -e "tell application \"Google Chrome\" to activate"']
     alt-ctrl-cmd-d = 'workspace D'
     alt-ctrl-cmd-e = 'workspace E'
     alt-ctrl-cmd-f = 'workspace F'
@@ -142,7 +142,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-ctrl-cmd-p = 'workspace P'
     alt-ctrl-cmd-q = 'workspace Q'
     alt-ctrl-cmd-r = 'workspace R'
-    alt-ctrl-cmd-s = 'workspace S'
+    alt-ctrl-cmd-s = ['workspace S', 'exec-and-forget osascript -e "tell application \"Safari\" to activate"']
     alt-ctrl-cmd-t = 'workspace T'
     alt-ctrl-cmd-u = 'workspace U'
     alt-ctrl-cmd-v = 'workspace V'
@@ -213,6 +213,10 @@ automatically-unhide-macos-hidden-apps = false
 [[on-window-detected]]
 if.app-id="com.github.wez.wezterm"
 run="move-node-to-workspace W"
+
+[[on-window-detected]]
+if.app-id="com.apple.Safari"
+run="move-node-to-workspace S"
 
 [[on-window-detected]]
 if.app-id="com.google.Chrome"
