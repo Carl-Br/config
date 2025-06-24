@@ -82,12 +82,6 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
--- TIP: Disable arrow keys in normal mode
-vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
-vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
-vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
-vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
-
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
@@ -152,6 +146,7 @@ require('lazy').setup({
   require 'plugins.vim-tmux-navigator',
   require 'plugins.tailwind-tools',
   require 'plugins.copilot',
+  require 'plugins.harpoon',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
@@ -174,7 +169,8 @@ require('lazy').setup({
   },
 })
 
---Mappings
--- Setze das Mapping für Ctrl + n, um NvimTreeToggle aufzurufen
-vim.keymap.set('n', '<C-n>', ':Neotree toggle<CR>', { noremap = true, silent = true, desc = 'toggle neotree' })
+-- plugin setups
+require 'plugins.setup.harpoon'
+require 'plugins.setup.neo-tree'
+
 -- vim: ts=2 sts=2 sw=2 et
