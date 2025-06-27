@@ -279,7 +279,6 @@ return {
 
     -- Set tab width to 2 for Go files
     vim.api.nvim_create_autocmd('FileType', {
-      pattern = 'go,templ',
       callback = function()
         vim.bo.expandtab = true
         vim.bo.tabstop = 4
