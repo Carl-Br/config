@@ -12,6 +12,7 @@ fi
 alias vim='nvim'
 alias air='~/go/bin/air'
 alias tmux="tmux -f ~/.config/tmux/tmux.conf -l new -t meow" # add config to tmux
+alias f='cd $(find . -type d | fzf)' # find directories under the active directory
 export PATH=$PATH:~/go/bin
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
@@ -22,6 +23,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-#zoxide
+
 eval "$(starship init zsh)"
+#zoxide
 eval "$(zoxide init --cmd cd zsh)" # should be at the end of the config file
