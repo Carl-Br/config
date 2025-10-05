@@ -259,6 +259,7 @@ return {
       'prettier',
       'eslint-lsp',
       'typescript-language-server',
+      'omnisharp',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
