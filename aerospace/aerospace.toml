@@ -119,6 +119,8 @@ cmd-ctrl-f = "exec-and-forget /usr/bin/osascript -e 'tell application \"Finder\"
     alt-ctrl-cmd-equal = 'resize smart +50'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
+    # Um mölgliche Apps zu sehen, diesen Befehl ausführen:
+    #osascript -e 'tell application "System Events" to get name of every process whose background only is false'
     alt-ctrl-cmd-1 = 'workspace 1'
     alt-ctrl-cmd-2 = 'workspace 2'
     alt-ctrl-cmd-3 = 'workspace 3'
@@ -129,7 +131,7 @@ cmd-ctrl-f = "exec-and-forget /usr/bin/osascript -e 'tell application \"Finder\"
     alt-ctrl-cmd-8 = 'workspace 8'
     alt-ctrl-cmd-9 = 'workspace 9'
     alt-ctrl-cmd-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
-    alt-ctrl-cmd-b = 'workspace B'
+    alt-ctrl-cmd-b = 'workspace B' # In your config, you can drop workspace bindings that you don't need
     alt-ctrl-cmd-c = ['workspace C', 'exec-and-forget osascript -e "tell application \"Google Chrome\" to activate"']
     alt-ctrl-cmd-d = 'workspace D'
     alt-ctrl-cmd-e = 'workspace E'
@@ -139,10 +141,10 @@ cmd-ctrl-f = "exec-and-forget /usr/bin/osascript -e 'tell application \"Finder\"
     alt-ctrl-cmd-m = 'workspace M'
     alt-ctrl-cmd-n = 'workspace N'
     alt-ctrl-cmd-o = 'workspace O'
-    alt-ctrl-cmd-p = 'workspace P'
+    alt-ctrl-cmd-p = ['workspace P', 'exec-and-forget osascript -e "tell application \"Postman\" to activate"']
     alt-ctrl-cmd-q = 'workspace Q'
     alt-ctrl-cmd-r = 'workspace R'
-    alt-ctrl-cmd-s = ['workspace S', 'exec-and-forget osascript -e "tell application \"Safari\" to activate"']
+    alt-ctrl-cmd-s = ['workspace S', 'exec-and-forget osascript -e "tell application \"Brave Browser\" to activate"']
     alt-ctrl-cmd-t = 'workspace T'
     alt-ctrl-cmd-u = 'workspace U'
     alt-ctrl-cmd-v = 'workspace V'

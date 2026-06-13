@@ -41,3 +41,6 @@ end, { desc = 'harpoon: prev' })
 vim.keymap.set('n', '<leader>n', function()
   harpoon:list():next()
 end, { desc = 'harpoon: next' })
+
+-- Wechsel zwischen aktuellem und alternativem Buffer (wie <C-6>)
+vim.keymap.set('n', '<Tab>', '<C-^>', { desc = 'Toggle between current and last buffer' })
