@@ -135,7 +135,7 @@ require('lazy').setup({
   require 'plugins.neo-tree',
   require 'plugins.vim-tmux-navigator',
   require 'plugins.tailwind-tools',
-  require 'plugins.copilot',
+  -- require 'plugins.copilot',
   require 'plugins.harpoon',
   require 'plugins.render-markdown',
   require 'plugins.markdown-preview',
