@@ -1,10 +1,14 @@
 return { -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
+  -- NOTE: nvim-treesitter hat den `main`-Branch zum Default gemacht, dessen API
+  -- komplett anders ist (kein `.configs`-Setup mehr). Diese Config nutzt die
+  -- klassische API, daher pinnen wir explizit den `master`-Branch.
+  branch = 'master',
   build = ':TSUpdate',
   main = 'nvim-treesitter.configs', -- Sets main module to use for opts
   -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
   opts = {
-    ensure_installed = { 'bash', 'c', 'diff', 'html', 'css', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'go' },
+    ensure_installed = { 'bash', 'c', 'diff', 'html', 'css', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'go', 'templ' },
     -- Autoinstall languages that are not installed
     auto_install = true,
     highlight = {
