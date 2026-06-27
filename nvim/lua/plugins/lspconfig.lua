@@ -258,5 +258,14 @@ return {
         vim.bo.shiftwidth = 2
       end,
     })
+    vim.api.nvim_create_autocmd('FileType', {
+      pattern = 'templ',
+      callback = function()
+        vim.bo.expandtab = false -- templ benutzt echte Tabs
+        vim.bo.tabstop = 2
+        vim.bo.shiftwidth = 2
+        vim.bo.softtabstop = 2
+      end,
+    })
   end,
 }
