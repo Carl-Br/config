@@ -1,16 +1,16 @@
--- tailwind-tools.lua
+-- lua/plugins/tailwind-tools.lua
 return {
   'luckasRanarison/tailwind-tools.nvim',
   name = 'tailwind-tools',
   build = ':UpdateRemotePlugins',
   dependencies = {
     'nvim-treesitter/nvim-treesitter',
-    'nvim-telescope/telescope.nvim', -- optional
-    'neovim/nvim-lspconfig', -- optional
+    'nvim-telescope/telescope.nvim',
+    'neovim/nvim-lspconfig',
   },
   opts = {
     server = {
-      override = false, -- Server NICHT vom Plugin aufsetzen lassen
+      override = false, -- tailwindcss wird in lspconfig.lua eingerichtet, nicht hier
     },
   },
 }

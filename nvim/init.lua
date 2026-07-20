@@ -94,13 +94,12 @@ vim.keymap.set('n', '<leader>ee', 'oif err != nil {<CR>}<Esc>Oreturn err<Esc>')
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
---  See `:help vim.hl.on_yank()`
+--  See `:help vim.highlight.on_yank()`
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
   callback = function()
-    -- NOTE: `vim.highlight` wurde in Neovim 0.11 zu `vim.hl` umbenannt.
-    vim.hl.on_yank()
+    vim.highlight.on_yank()
   end,
 })
 
@@ -136,7 +135,7 @@ require('lazy').setup({
   require 'plugins.neo-tree',
   require 'plugins.vim-tmux-navigator',
   require 'plugins.tailwind-tools',
-  require 'plugins.copilot',
+  -- require 'plugins.copilot',
   require 'plugins.harpoon',
   require 'plugins.render-markdown',
   require 'plugins.markdown-preview',
@@ -166,5 +165,6 @@ require('lazy').setup({
 -- plugin setups
 require 'plugins.setup.harpoon'
 require 'plugins.setup.neo-tree'
+require 'plugins.nonascii'
 
 -- vim: ts=2 sts=2 sw=2 et
