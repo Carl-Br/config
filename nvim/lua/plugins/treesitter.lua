@@ -15,6 +15,7 @@ return { -- Highlight, edit, and navigate code
       'lua',
       'luadoc',
       'markdown',
+      'nix',
       'markdown_inline',
       'query',
       'vim',
@@ -23,6 +24,10 @@ return { -- Highlight, edit, and navigate code
       'javascript',
       'typescript',
       'tsx',
+      'templ',
+      'rust',
+      'toml',
+      'ron',
     }
 
     -- Nur installieren, was noch fehlt (kein Reinstall bei jedem Start)

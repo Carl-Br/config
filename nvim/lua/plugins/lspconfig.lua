@@ -8,7 +8,7 @@ return {
     'hrsh7th/cmp-nvim-lsp',
   },
   config = function()
-    -- Keymaps / Highlights / Inlay Hints beim Attach (reine vim.lsp.*-API, kein Deprecation)
+    -- Keymaps / Highlights / Inlay Hints beim Attach
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
       callback = function(event)
@@ -85,7 +85,59 @@ return {
     })
 
     -- Server-spezifische Overrides (erweitern die mitgelieferten lsp/-Configs)
+    vim.lsp.config('templ', {})
+
+    vim.lsp.config('html', {
+      filetypes = { 'html', 'templ' },
+    })
+
+    vim.lsp.config('tailwindcss', {
+      filetypes = {
+        'html',
+        'css',
+        'scss',
+        'javascript',
+        'javascriptreact',
+        'typescript',
+        'typescriptreact',
+        'svelte',
+        'vue',
+        'templ',
+      },
+      root_markers = {
+        'tailwind.config.js',
+        'tailwind.config.ts',
+        'tailwind.config.cjs',
+        'postcss.config.js',
+        'package.json',
+        '.git',
+      },
+      settings = {
+        tailwindCSS = {
+          includeLanguages = {
+            templ = 'html',
+          },
+        },
+      },
+    })
+
+    vim.lsp.config('rust_analyzer', {
+      settings = {
+        ['rust-analyzer'] = {
+          cargo = { allFeatures = true },
+          checkOnSave = true,
+          check = { command = 'clippy' },
+          inlayHints = {
+            parameterHints = { enable = true },
+            typeHints = { enable = true },
+          },
+        },
+      },
+    })
+
     vim.lsp.config('gopls', {
+      cmd = { 'gopls' },
+      filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
       settings = {
         gopls = {
           completeUnimported = true,
@@ -95,9 +147,21 @@ return {
         },
       },
     })
+
     vim.lsp.config('lua_ls', {
-      settings = { Lua = { completion = { callSnippet = 'Replace' } } },
+      settings = {
+        Lua = {
+          completion = {
+            callSnippet = 'Replace',
+          },
+          diagnostics = {
+            globals = { 'vim' },
+            disable = { 'missing-fields' },
+          },
+        },
+      },
     })
+
     vim.lsp.config('eslint', {
       workspace_required = false,
       root_dir = function(bufnr, on_dir)
@@ -117,6 +181,7 @@ return {
       end,
     })
 
+    -- Mason: Tools/Server installieren
     require('mason-lspconfig').setup { ensure_installed = {} }
     require('mason-tool-installer').setup {
       ensure_installed = {
@@ -137,6 +202,8 @@ return {
       'gopls',
       'lua_ls',
       'tailwindcss',
+      'html',
+      'rust_analyzer',
       'ts_ls',
       'eslint',
       'jsonls',
