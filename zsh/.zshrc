@@ -12,8 +12,8 @@
 alias vim='nvim'
 alias air='~/go/bin/air'
 alias claude='~/.local/bin/claude'
-alias tmux="tmux -f ~/.config/tmux/tmux.conf -l new -t meow" # add config to tmux
 alias f='cd $(find . -type d | fzf)' # find directories under the active directory
+alias tmux="tmux -f ~/.config/tmux/tmux.conf new-session -A -s main"
 alias splitpdf='~/.config/bash_scripts/split_pdf.sh'
 export PATH=$PATH:~/go/bin
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
