@@ -32,3 +32,4 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(starship init zsh)"
 #zoxide
 eval "$(zoxide init --cmd cd zsh)" # should be at the end of the config file
+export PATH="$HOME/.local/bin:$PATH"
