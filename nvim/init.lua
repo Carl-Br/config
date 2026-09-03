@@ -95,6 +95,16 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 vim.keymap.set('n', '<leader>ee', 'oif err != nil {<CR>}<Esc>Oreturn err<Esc>')
 
+-- Typst Keybindings
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'typst',
+  callback = function()
+    vim.keymap.set('n', '<leader>tc', ':!typst compile %<CR>', { noremap = true, silent = true, buffer = true, desc = 'Typst compile' })
+    vim.keymap.set('n', '<leader>tw', ':!typst watch % --open &<CR>', { noremap = true, silent = true, buffer = true, desc = 'Typst watch (background)' })
+    -- <leader>tp wird automatisch von typst-preview.nvim gesetzt
+  end,
+})
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -146,6 +156,8 @@ require('lazy').setup({
   require 'plugins.render-markdown',
   require 'plugins.markdown-preview',
   require 'plugins.neogit',
+  require 'plugins.typst',
+  require 'plugins.typst-preview',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

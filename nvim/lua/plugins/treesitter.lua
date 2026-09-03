@@ -7,6 +7,7 @@ return { -- Highlight, edit, and navigate code
     require('nvim-treesitter').setup()
 
     local ensure_installed = {
+      'typst',
       'bash',
       'c',
       'diff',

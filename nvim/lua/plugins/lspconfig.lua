@@ -162,6 +162,20 @@ return {
       },
     })
 
+    -- Tinymist LSP für Typst
+    vim.lsp.config('tinymist', {
+      cmd = { 'tinymist' },
+      filetypes = { 'typst' },
+      offset_encoding = 'utf-8',
+      root_markers = { '.git', '.gitignore' },
+      single_file_support = true,
+      settings = {
+        tinymist = {
+          formatterMode = 'typstyle',
+        },
+      },
+    })
+
     vim.lsp.config('eslint', {
       workspace_required = false,
       root_dir = function(bufnr, on_dir)
@@ -209,6 +223,7 @@ return {
       'jsonls',
       'omnisharp',
       'templ',
+      'tinymist',
     }
 
     -- Tab-Breite für Go
