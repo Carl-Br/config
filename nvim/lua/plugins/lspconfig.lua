@@ -172,6 +172,7 @@ return {
       settings = {
         tinymist = {
           formatterMode = 'typstyle',
+          exportPdf = 'onSave', -- Compile on save to show errors
         },
       },
     })
@@ -209,6 +210,7 @@ return {
         'eslint-lsp',
         'typescript-language-server',
         'omnisharp',
+        'tinymist',
       },
     }
 

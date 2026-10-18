@@ -9,6 +9,7 @@
 #fi
 
 #alias pip='python3 -m pip'
+alias clear='clear && printf "\e[3J"'
 alias vim='nvim'
 alias air='~/go/bin/air'
 alias claude='~/.local/bin/claude'

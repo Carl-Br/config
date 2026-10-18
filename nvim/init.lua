@@ -119,6 +119,18 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Spell checking for English and German at the same time in text files
+--  See `:help spelllang`
+vim.api.nvim_create_autocmd('FileType', {
+  desc = 'Enable en_us + de_de spell checking for text files',
+  group = vim.api.nvim_create_augroup('spell-multilang', { clear = true }),
+  pattern = { 'typst', 'markdown', 'text', 'gitcommit', 'tex' },
+  callback = function()
+    vim.opt_local.spell = true
+    vim.opt_local.spelllang = { 'en_us', 'de_de' }
+  end,
+})
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
