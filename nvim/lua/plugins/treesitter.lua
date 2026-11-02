@@ -12,6 +12,7 @@ return { -- Highlight, edit, and navigate code
       'c',
       'diff',
       'html',
+      'xml',
       'css',
       'lua',
       'luadoc',
@@ -49,6 +50,9 @@ return { -- Highlight, edit, and navigate code
         -- startet nur, wenn für das Filetype ein Parser da ist
         if pcall(vim.treesitter.start) then
           vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+          -- Folding über Treesitter (z.B. Inhalt von HTML-Tags mit za ein-/ausklappen)
+          vim.wo[0][0].foldmethod = 'expr'
+          vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
         end
       end,
     })
