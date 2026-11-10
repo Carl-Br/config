@@ -3,13 +3,25 @@ local wezterm = require("wezterm")
 -- This will hold the configuration
 local config = wezterm.config_builder()
 
+config.adjust_window_size_when_changing_font_size = false
+
+local is_windows = wezterm.target_triple:find("windows") ~= nil
+
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
 config.font_size = 14
+config.audible_bell = "Disabled"
 
--- Hide top bar (changing to "None" breaks yabai)
-config.window_decorations = "RESIZE"
+config.visual_bell = {
+	fade_in_duration_ms = 75,
+	fade_out_duration_ms = 75,
+	target = "CursorColor",
+}
 
--- Hide tabs
+if is_windows then
+	config.window_decorations = "TITLE | RESIZE" -- normale Titelleiste
+else
+	config.window_decorations = "RESIZE"
+end
 config.enable_tab_bar = false
 
 -- Scheme
